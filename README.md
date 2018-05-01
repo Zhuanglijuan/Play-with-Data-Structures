@@ -7,3 +7,9 @@
 	1. [实现链表](https://github.com/Zhuanglijuan/Play-with-Data-Structures/tree/master/05-LinkedList/src)
 	2. [使用链表实现栈](https://github.com/Zhuanglijuan/Play-with-Data-Structures/tree/master/06-Implement-Stack-in-LinkedList/src)
 	3. [使用链表实现队列](https://github.com/Zhuanglijuan/Play-with-Data-Structures/tree/master/07-Implement-Queue-in-LinkedList/src)
+	4. LeetCode中和链表相关的问题
+		[删除链表中等于给定值 val 的所有节点](https://leetcode-cn.com/problems/remove-linked-list-elements/description/)。
+		示例:
+			输入: 1->2->6->3->4->5->6, val = 6
+			输出: 1->2->3->4->5
+		[解答](https://github.com/Zhuanglijuan/Play-with-Data-Structures/tree/master/203-Remove-LinkedList-Elements/src)
