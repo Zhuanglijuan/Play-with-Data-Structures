@@ -323,3 +323,9 @@
 		}
 	}
 	```
+
+7. 集合
+	1. 二分搜索树为底层实现集合
+	2. 链表为底层实现集合
+	3. [LeetCode中与集合相关的问题](https://leetcode-cn.com/problems/unique-morse-code-words/description/)
+		1. 解答
