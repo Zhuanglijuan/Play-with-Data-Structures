@@ -16,7 +16,7 @@
 		```
 		3. [解答](https://github.com/Zhuanglijuan/Play-with-Data-Structures/tree/master/203-Remove-LinkedList-Elements/src)
 
-6. [二分搜索树](https://github.com/Zhuanglijuan/Play-with-Data-Structures/tree/master/08-BST/src)
+6. [二分搜索树](https://github.com/Zhuanglijuan/Play-with-Data-Structures/tree/master/08-Binary-Search-Tree/src)
 	1. 添加元素
 
 	```java
