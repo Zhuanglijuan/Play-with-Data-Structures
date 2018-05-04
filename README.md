@@ -325,7 +325,7 @@
 	```
 
 7. 集合
-	1. 二分搜索树为底层实现集合
-	2. 链表为底层实现集合
+	1. [二分搜索树为底层实现集合](https://github.com/Zhuanglijuan/Play-with-Data-Structures/tree/master/09-Set/01-Set-Basics-and-BSTSet/src)
+	2. [链表为底层实现集合](https://github.com/Zhuanglijuan/Play-with-Data-Structures/tree/master/09-Set/02-LinkedListSet/src)
 	3. [LeetCode中与集合相关的问题](https://leetcode-cn.com/problems/unique-morse-code-words/description/)
-		1. 解答
+		1. [解答](https://github.com/Zhuanglijuan/Play-with-Data-Structures/tree/master/09-Set/804-Unique-Morse-Code-Words/src)
