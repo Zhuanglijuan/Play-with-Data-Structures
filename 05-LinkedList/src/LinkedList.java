@@ -105,6 +105,54 @@ public class LinkedList<E> {
 		return false;
 	}
 	
+	/**
+	 * 从链表中删除index(0-based)未知的元素，返回删除的元素
+	 * @param index
+	 * @return
+	 */
+	public E remove(int index) {
+		if (index < 0 || index >= size)
+			throw new IllegalArgumentException("Remove failed. Illegal Index");
+		Node prev = dummyHead;
+		for(int i = 0; i < index ; i ++) {
+			prev = prev.next;
+		}
+		
+		Node delNode = prev.next;
+		prev.next = delNode.next;
+		delNode.next = null;
+		size-- ;
+		return delNode.e;
+	}
+	
+	//从链表中删除第一个元素，返回删除的元素
+	public E removeFirst() {
+		return remove(0);
+	}
+	
+	//从链表中删除最后一个元素
+	public E removeLast() {
+		return remove(size - 1);
+	}
+	
+	// 从链表中删除元素e
+    public void removeElement(E e){
+
+        Node prev = dummyHead;
+        while(prev.next != null){
+            if(prev.next.e.equals(e))
+                break;
+            prev = prev.next;
+        }
+
+        if(prev.next != null){
+            Node delNode = prev.next;
+            prev.next = delNode.next;
+            delNode.next = null;
+            size --;
+        }
+    }
+	
 	@Override
 	public String toString() {
 		StringBuilder res = new StringBuilder();

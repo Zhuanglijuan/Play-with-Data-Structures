@@ -1,16 +1,4 @@
-//添加操作
-//addLast(e) O(n)
-//addFirst(e) O(1)
-//add(index,e) O(n/2) = O(n)
-//删除操作
-//removeLast(e) O(n)
-//removeFirst(e) O(1)
-//remove(index,e) O(n/2) = O(n)
-//更新操作
-//set(index,e) O(n)
-//查找操作
-//get(index) O(n)
-//contains(e) O(n)
+
 public class LinkedList<E> {
 	private class Node {
 		public E e;
@@ -146,6 +134,24 @@ public class LinkedList<E> {
 	public E removeLast() {
 		return remove(size - 1);
 	}
+	
+	// 从链表中删除元素e
+    public void removeElement(E e){
+
+        Node prev = dummyHead;
+        while(prev.next != null){
+            if(prev.next.e.equals(e))
+                break;
+            prev = prev.next;
+        }
+
+        if(prev.next != null){
+            Node delNode = prev.next;
+            prev.next = delNode.next;
+            delNode.next = null;
+            size --;
+        }
+    }
 	
 	@Override
 	public String toString() {
