@@ -329,3 +329,7 @@
 	2. [链表为底层实现集合](https://github.com/Zhuanglijuan/Play-with-Data-Structures/tree/master/09-Set/02-LinkedListSet/src)
 	3. [LeetCode中与集合相关的问题](https://leetcode-cn.com/problems/unique-morse-code-words/description/)
 		1. [解答](https://github.com/Zhuanglijuan/Play-with-Data-Structures/tree/master/09-Set/804-Unique-Morse-Code-Words/src)
+
+8. 映射
+	1. [使用链表实现map](https://github.com/Zhuanglijuan/Play-with-Data-Structures/tree/master/10-Map/01-LinkedListMap)
+	2. [使用二分搜索树实现map](https://github.com/Zhuanglijuan/Play-with-Data-Structures/tree/master/10-Map/02-BSTMap)
