@@ -337,4 +337,5 @@
 		1. [349. Intersection of Two Arrays](https://leetcode-cn.com/problems/intersection-of-two-arrays/description/)
 			1. [解答](https://github.com/Zhuanglijuan/Play-with-Data-Structures/blob/master/349-Intersection-of-Two-Arrays/src/Solution.java)
 
-		
+		2. [350. Intersection of Two Arrays II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/description/)
+			1. [解答](https://github.com/Zhuanglijuan/Play-with-Data-Structures/blob/master/350-Intersection-of-Two-Arrays-II/src/Solution.java)
