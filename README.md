@@ -333,3 +333,6 @@
 8. 映射
 	1. [使用链表实现map](https://github.com/Zhuanglijuan/Play-with-Data-Structures/tree/master/10-Map/01-LinkedListMap)
 	2. [使用二分搜索树实现map](https://github.com/Zhuanglijuan/Play-with-Data-Structures/tree/master/10-Map/02-BSTMap)
+	3. LeetCode中与映射相关的问题
+		1. [349. Intersection of Two Arrays](https://leetcode-cn.com/problems/intersection-of-two-arrays/description/)
+		2. 
