@@ -339,3 +339,8 @@
 
 		2. [350. Intersection of Two Arrays II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/description/)
 			1. [解答](https://github.com/Zhuanglijuan/Play-with-Data-Structures/blob/master/350-Intersection-of-Two-Arrays-II/src/Solution.java)
+
+9. 堆和优先队列
+	1. [使用动态数组实现最大堆，使用最大堆实现优先队列](https://github.com/Zhuanglijuan/Play-with-Data-Structures/tree/master/11-Heap-and-Priority-Queue/src)
+	2. [347. Top K Frequent Elements](https://leetcode-cn.com/problems/top-k-frequent-elements/description/)
+		1. [解答](https://github.com/Zhuanglijuan/Play-with-Data-Structures/blob/master/347-Top-K-Frequent-Elements/src/Solution.java)
