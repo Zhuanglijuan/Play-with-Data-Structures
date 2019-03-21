@@ -25,13 +25,13 @@ public class ArrayQueue<E> implements Queue<E> {
 		return array.getCapacity();
 	}
 
-	// 入队
+	// 鍏ラ槦
 	@Override
 	public void enqueue(E e) {
 		array.addLast(e);
 	}
 
-	// 出队
+	// 鍑洪槦
 	@Override
 	public E dequeue() {
 		return array.removeFirst();

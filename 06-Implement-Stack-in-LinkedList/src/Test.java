@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class Test {
-	// ²âÊÔÊ¹ÓÃstackÔËĞĞopCount¸öpushºÍpop²Ù×÷ËùĞèÒªµÄÊ±¼ä£¬µ¥Î»£ºÃë
+	// æµ‹è¯•ä½¿ç”¨stackè¿è¡ŒopCountä¸ªpushå’Œpopæ“ä½œæ‰€éœ€è¦çš„æ—¶é—´ï¼Œå•ä½ï¼šç§’
     private static double testStack(Stack<Integer> stack, int opCount){
 
         long startTime = System.nanoTime();
@@ -29,6 +29,6 @@ public class Test {
         double time2 = testStack(linkedListStack, opCount);
         System.out.println("LinkedListStack, time: " + time2 + " s");
 
-        // ÆäÊµÕâ¸öÊ±¼ä±È½ÏºÜ¸´ÔÓ£¬ÒòÎªLinkedListStackÖĞ°üº¬¸ü¶àµÄnew²Ù×÷
+        // å…¶å®è¿™ä¸ªæ—¶é—´æ¯”è¾ƒå¾ˆå¤æ‚ï¼Œå› ä¸ºLinkedListStackä¸­åŒ…å«æ›´å¤šçš„newæ“ä½œ
     }
 }

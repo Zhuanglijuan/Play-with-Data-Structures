@@ -3,10 +3,10 @@ import java.util.Queue;
 import java.util.Stack;
 
 public class BST<E extends Comparable<E>> {
-	// ÓÃ»§²»ĞèÒªÖªµÀ¶ş·ÖËÑË÷Ê÷ÓµÓĞÔõÑùµÄ½Úµã£¬ÊµÏÖµÄÔ­ÀíÊÇÔõÑùµÄ
+	// ç”¨æˆ·ä¸éœ€è¦çŸ¥é“äºŒåˆ†æœç´¢æ ‘æ‹¥æœ‰æ€æ ·çš„èŠ‚ç‚¹ï¼Œå®ç°çš„åŸç†æ˜¯æ€æ ·çš„
 	private class Node {
 		public E e;
-		public Node left, right;// ×óº¢×Ó£¬ÓÒº¢×Ó
+		public Node left, right;// å·¦å­©å­ï¼Œå³å­©å­
 
 		public Node(E e) {
 			this.e = e;
@@ -15,8 +15,8 @@ public class BST<E extends Comparable<E>> {
 		}
 	}
 
-	private Node root;// ¶ş·ÖËÑË÷Ê÷µÄ¸ù½Úµã
-	private int size;// ´æ´¢¶ş·ÖËÑË÷Ê÷µÄÔªËØ¸öÊı
+	private Node root;// äºŒåˆ†æœç´¢æ ‘çš„æ ¹èŠ‚ç‚¹
+	private int size;// å­˜å‚¨äºŒåˆ†æœç´¢æ ‘çš„å…ƒç´ ä¸ªæ•°
 
 	public BST() {
 		root = null;
@@ -24,7 +24,7 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * »ñÈ¡¶ş·ÖËÑË÷Ê÷µÄÔªËØ¸öÊı
+	 * è·å–äºŒåˆ†æœç´¢æ ‘çš„å…ƒç´ ä¸ªæ•°
 	 * 
 	 * @return
 	 */
@@ -33,7 +33,7 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * ÅĞ¶Ï¶ş·ÖËÑË÷Ê÷ÊÇ·ñÎª¿Õ
+	 * åˆ¤æ–­äºŒåˆ†æœç´¢æ ‘æ˜¯å¦ä¸ºç©º
 	 * 
 	 * @return
 	 */
@@ -42,7 +42,7 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * Ïò¶ş·ÖËÑË÷Ê÷ÖĞÌí¼ÓĞÂµÄÔªËØe
+	 * å‘äºŒåˆ†æœç´¢æ ‘ä¸­æ·»åŠ æ–°çš„å…ƒç´ e
 	 * 
 	 * @param e
 	 */
@@ -51,7 +51,7 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * ÏòÒÔnodeÎª¸ùµÄ¶ş·ÖËÑË÷Ê÷ÖĞ²åÈëÔªËØe£¬µİ¹éËã·¨ ·µ»Ø²åÈëĞÂ½Úµãºó¶ş·ÖËÑË÷Ê÷µÄ¸ù
+	 * å‘ä»¥nodeä¸ºæ ¹çš„äºŒåˆ†æœç´¢æ ‘ä¸­æ’å…¥å…ƒç´ eï¼Œé€’å½’ç®—æ³• è¿”å›æ’å…¥æ–°èŠ‚ç‚¹åäºŒåˆ†æœç´¢æ ‘çš„æ ¹
 	 * 
 	 * @param node
 	 * @param e
@@ -71,7 +71,7 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * ÅĞ¶Ï¶ş·ÖËÑË÷Ê÷ÖĞÊÇ·ñ°üº¬ÔªËØe
+	 * åˆ¤æ–­äºŒåˆ†æœç´¢æ ‘ä¸­æ˜¯å¦åŒ…å«å…ƒç´ e
 	 * 
 	 * @param e
 	 * @return
@@ -81,7 +81,7 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * ¿´ÒÔnodeÎª¸ùµÄ¶ş·ÖËÑË÷Ê÷ÖĞÊÇ·ñ°üº¬ÔªËØe£¬µİ¹éËã·¨
+	 * çœ‹ä»¥nodeä¸ºæ ¹çš„äºŒåˆ†æœç´¢æ ‘ä¸­æ˜¯å¦åŒ…å«å…ƒç´ eï¼Œé€’å½’ç®—æ³•
 	 * 
 	 * @param node
 	 * @param e
@@ -99,20 +99,20 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * ¶ş·ÖËÑË÷Ê÷µÄÇ°Ğò±éÀú
+	 * äºŒåˆ†æœç´¢æ ‘çš„å‰åºéå†
 	 */
 	public void preOrder() {
 		preOrder(root);
 	}
 
 	/**
-	 * Ç°Ğò±éÀúÒÔnodeÎª¸ùµÄ¶ş·ÖËÑË÷Ê÷£¬µİ¹éËã·¨
+	 * å‰åºéå†ä»¥nodeä¸ºæ ¹çš„äºŒåˆ†æœç´¢æ ‘ï¼Œé€’å½’ç®—æ³•
 	 * 
 	 * @param node
 	 */
 	private void preOrder(Node node) {
 		/*
-		 * µİ¹éÖÕÖ¹Ìõ¼ş if(node == null) return;
+		 * é€’å½’ç»ˆæ­¢æ¡ä»¶ if(node == null) return;
 		 */
 		if (node != null) {
 			System.out.println(node.e);
@@ -122,7 +122,7 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * ¶ş·ÖËÑË÷Ê÷·Çµİ¹éµÄÇ°Ğò±éÀú
+	 * äºŒåˆ†æœç´¢æ ‘éé€’å½’çš„å‰åºéå†
 	 */
 	public void preOrderNR() {
 		Stack<Node> stack = new Stack<Node>();
@@ -138,14 +138,14 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * ¶ş·ÖËÑË÷Ê÷µÄÖĞĞò±éÀú
+	 * äºŒåˆ†æœç´¢æ ‘çš„ä¸­åºéå†
 	 */
 	public void inOrder() {
 		inOrder(root);
 	}
 
 	/**
-	 * ÖĞĞò±éÀúÒÔnodeÎª¸ùµÄ¶ş·ÖËÑË÷Ê÷£¬µİ¹éËã·¨
+	 * ä¸­åºéå†ä»¥nodeä¸ºæ ¹çš„äºŒåˆ†æœç´¢æ ‘ï¼Œé€’å½’ç®—æ³•
 	 * 
 	 * @param node
 	 */
@@ -158,14 +158,14 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * ¶ş·ÖËÑË÷Ê÷µÄºóĞò±éÀú
+	 * äºŒåˆ†æœç´¢æ ‘çš„ååºéå†
 	 */
 	public void postOrder() {
 		postOrder(root);
 	}
 
 	/**
-	 * ºóĞò±éÀúÒÔnodeÎª¸ùµÄ¶ş·ÖËÑË÷Ê÷£¬µİ¹éËã·¨
+	 * ååºéå†ä»¥nodeä¸ºæ ¹çš„äºŒåˆ†æœç´¢æ ‘ï¼Œé€’å½’ç®—æ³•
 	 * 
 	 * @param node
 	 */
@@ -178,7 +178,7 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * ¶ş·ÖËÑË÷Ê÷µÄ²ãĞò±éÀú
+	 * äºŒåˆ†æœç´¢æ ‘çš„å±‚åºéå†
 	 */
 	public void levelOrder() {
 		Queue<Node> queue = new LinkedList<>();
@@ -194,7 +194,7 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * Ñ°ÕÒ¶ş·ÖËÑË÷Ê÷µÄ×îĞ¡ÔªËØ
+	 * å¯»æ‰¾äºŒåˆ†æœç´¢æ ‘çš„æœ€å°å…ƒç´ 
 	 * 
 	 * @return
 	 */
@@ -206,7 +206,7 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * ·µ»ØÒÔnodeÎª¸ùµÄ¶ş·ÖËÑË÷Ê÷µÄ×îĞ¡ÖµËùÔÚµÄ½Úµã
+	 * è¿”å›ä»¥nodeä¸ºæ ¹çš„äºŒåˆ†æœç´¢æ ‘çš„æœ€å°å€¼æ‰€åœ¨çš„èŠ‚ç‚¹
 	 * 
 	 * @param node
 	 * @return
@@ -218,7 +218,7 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * Ñ°ÕÒ¶ş·ÖËÑË÷Ê÷µÄ×î´óÔªËØ
+	 * å¯»æ‰¾äºŒåˆ†æœç´¢æ ‘çš„æœ€å¤§å…ƒç´ 
 	 * 
 	 * @return
 	 */
@@ -230,7 +230,7 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * ·µ»ØÒÔnodeÎª¸ùµÄ¶ş·ÖËÑË÷Ê÷µÄ×î´óÖµËùÔÚµÄ½Úµã
+	 * è¿”å›ä»¥nodeä¸ºæ ¹çš„äºŒåˆ†æœç´¢æ ‘çš„æœ€å¤§å€¼æ‰€åœ¨çš„èŠ‚ç‚¹
 	 * 
 	 * @param node
 	 * @return
@@ -242,7 +242,7 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * ´Ó¶ş·ÖËÑË÷Ê÷ÖĞÉ¾³ı×îĞ¡ÖµËùÔÚ½Úµã£¬·µ»Ø×îĞ¡Öµ
+	 * ä»äºŒåˆ†æœç´¢æ ‘ä¸­åˆ é™¤æœ€å°å€¼æ‰€åœ¨èŠ‚ç‚¹ï¼Œè¿”å›æœ€å°å€¼
 	 * 
 	 * @return
 	 */
@@ -253,7 +253,7 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * É¾³ıÒÔnodeÎª¸ùµÄ¶ş·ÖËÑË÷Ê÷ÖĞµÄ×îĞ¡½Úµã ·µ»ØÉ¾³ı½ÚµãºóĞÂµÄ¶ş·ÖËÑË÷Ê÷µÄ¸ù
+	 * åˆ é™¤ä»¥nodeä¸ºæ ¹çš„äºŒåˆ†æœç´¢æ ‘ä¸­çš„æœ€å°èŠ‚ç‚¹ è¿”å›åˆ é™¤èŠ‚ç‚¹åæ–°çš„äºŒåˆ†æœç´¢æ ‘çš„æ ¹
 	 * 
 	 * @param node
 	 * @return
@@ -270,7 +270,7 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * ´Ó¶ş·ÖËÑË÷Ê÷ÖĞÉ¾³ı×î´óÖµËùÔÚ½Úµã£¬·µ»Ø×î´óÖµ
+	 * ä»äºŒåˆ†æœç´¢æ ‘ä¸­åˆ é™¤æœ€å¤§å€¼æ‰€åœ¨èŠ‚ç‚¹ï¼Œè¿”å›æœ€å¤§å€¼
 	 * 
 	 * @return
 	 */
@@ -281,7 +281,7 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * É¾³ıÒÔnodeÎª¸ùµÄ¶ş·ÖËÑË÷Ê÷ÖĞµÄ×î´ó½Úµã ·µ»ØÉ¾³ı½ÚµãºóĞÂµÄ¶ş·ÖËÑË÷Ê÷µÄ¸ù
+	 * åˆ é™¤ä»¥nodeä¸ºæ ¹çš„äºŒåˆ†æœç´¢æ ‘ä¸­çš„æœ€å¤§èŠ‚ç‚¹ è¿”å›åˆ é™¤èŠ‚ç‚¹åæ–°çš„äºŒåˆ†æœç´¢æ ‘çš„æ ¹
 	 * 
 	 * @param node
 	 * @return
@@ -298,7 +298,7 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * ´Ó¶ş·ÖËÑË÷Ê÷ÖĞÉ¾³ıÔªËØÎªeµÄ½Úµã
+	 * ä»äºŒåˆ†æœç´¢æ ‘ä¸­åˆ é™¤å…ƒç´ ä¸ºeçš„èŠ‚ç‚¹
 	 * 
 	 * @param e
 	 */
@@ -307,7 +307,7 @@ public class BST<E extends Comparable<E>> {
 	}
 
 	/**
-	 * É¾³ıµôÒÔnodeÎª¸ùµÄ¶ş·ÖËÑË÷Ê÷ÖĞÖµÎªeµÄ½Úµã£¬µİ¹éËã·¨ ·µ»ØÉ¾³ı½ÚµãºóĞÂµÄ¶ş·ÖËÑË÷Ê÷µÄ¸ù
+	 * åˆ é™¤æ‰ä»¥nodeä¸ºæ ¹çš„äºŒåˆ†æœç´¢æ ‘ä¸­å€¼ä¸ºeçš„èŠ‚ç‚¹ï¼Œé€’å½’ç®—æ³• è¿”å›åˆ é™¤èŠ‚ç‚¹åæ–°çš„äºŒåˆ†æœç´¢æ ‘çš„æ ¹
 	 * 
 	 * @param node
 	 * @param e
@@ -323,23 +323,23 @@ public class BST<E extends Comparable<E>> {
 			node.right = remove(node.right, e);
 			return node;
 		} else {// e.compareTo(node.e) = 0
-				// ´ıÉ¾³ı½Úµã×ó½ÚµãÎª¿ÕµÄÇé¿ö
+				// å¾…åˆ é™¤èŠ‚ç‚¹å·¦èŠ‚ç‚¹ä¸ºç©ºçš„æƒ…å†µ
 			if (node.left == null) {
 				Node rightNode = node.right;
 				node.right = null;
 				size--;
 				return rightNode;
 			}
-			// ´ıÉ¾³ı½ÚµãÓÒ×ÓÊ÷Îª¿ÕµÄÇé¿ö
+			// å¾…åˆ é™¤èŠ‚ç‚¹å³å­æ ‘ä¸ºç©ºçš„æƒ…å†µ
 			if (node.right == null) {
 				Node leftNode = node.left;
 				node.left = null;
 				size--;
 				return leftNode;
 			}
-			// ´ıÉ¾³ı½Úµã×óÓÒ×ÓÊ÷²»Îª¿ÕµÄÇé¿ö
-			// ÕÒµ½±È´ıÉ¾³ı½Úµã´óµÄ×îĞ¡½Úµã£¬¼´´ıÉ¾³ı½ÚµãÓÒ×ÓÊ÷µÄ×îĞ¡½Úµã
-			// ÓÃÕâ¸ö½Úµã¶¥Ìæ´ıÉ¾³ı½ÚµãµÄÎ»ÖÃ
+			// å¾…åˆ é™¤èŠ‚ç‚¹å·¦å³å­æ ‘ä¸ä¸ºç©ºçš„æƒ…å†µ
+			// æ‰¾åˆ°æ¯”å¾…åˆ é™¤èŠ‚ç‚¹å¤§çš„æœ€å°èŠ‚ç‚¹ï¼Œå³å¾…åˆ é™¤èŠ‚ç‚¹å³å­æ ‘çš„æœ€å°èŠ‚ç‚¹
+			// ç”¨è¿™ä¸ªèŠ‚ç‚¹é¡¶æ›¿å¾…åˆ é™¤èŠ‚ç‚¹çš„ä½ç½®
 			Node successor = minimum(node.right);// size++
 			successor.right = removeMin(node.right);
 			successor.left = node.left;
@@ -357,7 +357,7 @@ public class BST<E extends Comparable<E>> {
 		return res.toString();
 	}
 
-	// Éú³ÉÒÔnodeÎª¸ù½Úµã£¬Éî¶ÈÎªdepthµÄÃèÊö¶ş²æÊ÷µÄ×Ö·û´®
+	// ç”Ÿæˆä»¥nodeä¸ºæ ¹èŠ‚ç‚¹ï¼Œæ·±åº¦ä¸ºdepthçš„æè¿°äºŒå‰æ ‘çš„å­—ç¬¦ä¸²
 	private void generateBSTString(Node node, int depth, StringBuilder res) {
 		if (node == null) {
 			res.append(generateDepthString(depth) + "null\n");

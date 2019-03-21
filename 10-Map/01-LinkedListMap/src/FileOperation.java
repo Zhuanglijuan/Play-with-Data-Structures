@@ -7,10 +7,10 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
-// ÎÄ¼şÏà¹Ø²Ù×÷
+// æ–‡ä»¶ç›¸å…³æ“ä½œ
 public class FileOperation {
 
-	// ¶ÁÈ¡ÎÄ¼şÃû³ÆÎªfilenameÖĞµÄÄÚÈİ£¬²¢½«ÆäÖĞ°üº¬µÄËùÓĞ´ÊÓï·Å½øwordsÖĞ
+	// è¯»å–æ–‡ä»¶åç§°ä¸ºfilenameä¸­çš„å†…å®¹ï¼Œå¹¶å°†å…¶ä¸­åŒ…å«çš„æ‰€æœ‰è¯è¯­æ”¾è¿›wordsä¸­
 	public static boolean readFile(String filename, ArrayList<String> words) {
 
 		if (filename == null || words == null) {
@@ -18,7 +18,7 @@ public class FileOperation {
 			return false;
 		}
 
-		// ÎÄ¼ş¶ÁÈ¡
+		// æ–‡ä»¶è¯»å–
 		Scanner scanner;
 
 		try {
@@ -34,9 +34,9 @@ public class FileOperation {
 			return false;
 		}
 
-		// ¼òµ¥·Ö´Ê
-		// Õâ¸ö·Ö´Ê·½Ê½Ïà¶Ô¼òÂª, Ã»ÓĞ¿¼ÂÇºÜ¶àÎÄ±¾´¦ÀíÖĞµÄÌØÊâÎÊÌâ
-		// ÔÚÕâÀïÖ»×ödemoÕ¹Ê¾ÓÃ
+		// ç®€å•åˆ†è¯
+		// è¿™ä¸ªåˆ†è¯æ–¹å¼ç›¸å¯¹ç®€é™‹, æ²¡æœ‰è€ƒè™‘å¾ˆå¤šæ–‡æœ¬å¤„ç†ä¸­çš„ç‰¹æ®Šé—®é¢˜
+		// åœ¨è¿™é‡Œåªåšdemoå±•ç¤ºç”¨
 		if (scanner.hasNextLine()) {
 
 			String contents = scanner.useDelimiter("\\A").next();
@@ -55,7 +55,7 @@ public class FileOperation {
 		return true;
 	}
 
-	// Ñ°ÕÒ×Ö·û´®sÖĞ£¬´ÓstartµÄÎ»ÖÃ¿ªÊ¼µÄµÚÒ»¸ö×ÖÄ¸×Ö·ûµÄÎ»ÖÃ
+	// å¯»æ‰¾å­—ç¬¦ä¸²sä¸­ï¼Œä»startçš„ä½ç½®å¼€å§‹çš„ç¬¬ä¸€ä¸ªå­—æ¯å­—ç¬¦çš„ä½ç½®
 	private static int firstCharacterIndex(String s, int start) {
 
 		for (int i = start; i < s.length(); i++)

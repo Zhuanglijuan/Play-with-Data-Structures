@@ -13,7 +13,7 @@ public class Array<E> {
 	}
 
 	public Array() {
-		this(10);// Ä¬ÈÏÊı×é³¤¶ÈÎª10
+		this(10);// é»˜è®¤æ•°ç»„é•¿åº¦ä¸º10
 	}
 
 	public Array(int initialCapacity) {
@@ -32,7 +32,7 @@ public class Array<E> {
 
 	public void add(E obj) {
 		ensureCapacity();
-		// ÏÈ¸³Öµºó×ÔÔö
+		// å…ˆèµ‹å€¼åè‡ªå¢
 		elementData[size++] = obj;
 	}
 
@@ -67,7 +67,7 @@ public class Array<E> {
 
 	public E remove(int index) {
 		rangeCheck(index);
-		// É¾³ıÖ¸¶¨Î»ÖÃµÄ¶ÔÏó
+		// åˆ é™¤æŒ‡å®šä½ç½®çš„å¯¹è±¡
 		E oldValue = elementData[index];
 		int numMoved = size - index - 1;
 		if (numMoved > 0)
@@ -75,7 +75,7 @@ public class Array<E> {
 		elementData[--size] = null;
 
 		if (size == elementData.length / 4)
-			resize(elementData.length / 2 + 1);// ±ÜÃâµ±elementData.length / 2 = 0µÄÇé¿ö
+			resize(elementData.length / 2 + 1);// é¿å…å½“elementData.length / 2 = 0çš„æƒ…å†µ
 
 		return oldValue;
 	}
@@ -90,7 +90,7 @@ public class Array<E> {
 
 	public void removeElement(Object obj) {
 		for (int i = 0; i < size; i++) {
-			if (get(i).equals(obj)) {// µ×²ãµ÷ÓÃequals()¶ø²»ÊÇ==
+			if (get(i).equals(obj)) {// åº•å±‚è°ƒç”¨equals()è€Œä¸æ˜¯==
 				remove(i);
 				return;
 			}
@@ -115,7 +115,7 @@ public class Array<E> {
 	}
 
 	private void ensureCapacity() {
-		// Êı×éÀ©ÈİºÍÊı¾İ¿½±´
+		// æ•°ç»„æ‰©å®¹å’Œæ•°æ®æ‹·è´
 		if (size + 1 > elementData.length) {
 			resize(size * 2 + 1);
 		}

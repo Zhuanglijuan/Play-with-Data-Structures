@@ -31,17 +31,17 @@ public class LinkedList<E> {
 		size = 0;
 	}
 
-	// »ñÈ¡Á´±íÖĞµÄÔªËØ¸öÊı
+	// è·å–é“¾è¡¨ä¸­çš„å…ƒç´ ä¸ªæ•°
 	public int getSize() {
 		return size;
 	}
 
-	// ·µ»ØÁ´±íÊÇ·ñÎª¿Õ
+	// è¿”å›é“¾è¡¨æ˜¯å¦ä¸ºç©º
 	public boolean isEmpty() {
 		return size == 0;
 	}
 
-	// ÔÚÁ´±íµÄindex(0-based)Î»ÖÃÌí¼ÓĞÂµÄÔªËØe
+	// åœ¨é“¾è¡¨çš„index(0-based)ä½ç½®æ·»åŠ æ–°çš„å…ƒç´ e
 	public void add(int index, E e) {
 		if (index < 0 || index > size)
 			throw new IllegalArgumentException("Add failed. Illegal Index");
@@ -52,7 +52,7 @@ public class LinkedList<E> {
 		size++;
 	}
 
-	// ÔÚÁ´±íÍ·Ìí¼ÓĞÂµÄÔªËØe
+	// åœ¨é“¾è¡¨å¤´æ·»åŠ æ–°çš„å…ƒç´ e
 	public void addFirst(E e) {
 		/*
 		 * Node node = new Node(e); 
@@ -64,7 +64,7 @@ public class LinkedList<E> {
 		add(0, e);
 	}
 
-	// ÔÚÁ´±íÄ©Î²Ìí¼ÓĞÂµÄÔªËØe
+	// åœ¨é“¾è¡¨æœ«å°¾æ·»åŠ æ–°çš„å…ƒç´ e
 	public void addLast(E e) {
 		add(size, e);
 	}
@@ -105,7 +105,7 @@ public class LinkedList<E> {
 		return false;
 	}
 	/**
-	 * ´ÓÁ´±íÖĞÉ¾³ıindex(0-based)Î´ÖªµÄÔªËØ£¬·µ»ØÉ¾³ıµÄÔªËØ
+	 * ä»é“¾è¡¨ä¸­åˆ é™¤index(0-based)æœªçŸ¥çš„å…ƒç´ ï¼Œè¿”å›åˆ é™¤çš„å…ƒç´ 
 	 * @param index
 	 * @return
 	 */
@@ -124,17 +124,17 @@ public class LinkedList<E> {
 		return delNode.e;
 	}
 	
-	//´ÓÁ´±íÖĞÉ¾³ıµÚÒ»¸öÔªËØ£¬·µ»ØÉ¾³ıµÄÔªËØ
+	//ä»é“¾è¡¨ä¸­åˆ é™¤ç¬¬ä¸€ä¸ªå…ƒç´ ï¼Œè¿”å›åˆ é™¤çš„å…ƒç´ 
 	public E removeFirst() {
 		return remove(0);
 	}
 	
-	//´ÓÁ´±íÖĞÉ¾³ı×îºóÒ»¸öÔªËØ
+	//ä»é“¾è¡¨ä¸­åˆ é™¤æœ€åä¸€ä¸ªå…ƒç´ 
 	public E removeLast() {
 		return remove(size - 1);
 	}
 	
-	// ´ÓÁ´±íÖĞÉ¾³ıÔªËØe
+	// ä»é“¾è¡¨ä¸­åˆ é™¤å…ƒç´ e
     public void removeElement(E e){
 
         Node prev = dummyHead;

@@ -8,23 +8,23 @@ public class Main {
 		for (int num : nums)
 			bst.add(num);
 		
-		//²ãĞò±éÀú
+		//å±‚åºéå†
 		bst.levelOrder();
 		System.out.println();
 
-		//Ç°Ğò±éÀú
+		//å‰åºéå†
 		bst.preOrder();
 		System.out.println();
-		//·Çµİ¹éÇ°Ğò±éÀú
+		//éé€’å½’å‰åºéå†
 		bst.preOrderNR();
 		System.out.println();
 
-		//ÖĞĞò±éÀú
+		//ä¸­åºéå†
 		bst.inOrder();
 		System.out.println();
 
-		//ºóĞò±éÀú
-		bst.postOrder();// ºóĞò±éÀúµÄÒ»¸öÓ¦ÓÃ:Îª¶ş·ÖËÑË÷Ê÷ÊÍ·ÅÄÚ´æ
+		//ååºéå†
+		bst.postOrder();// ååºéå†çš„ä¸€ä¸ªåº”ç”¨:ä¸ºäºŒåˆ†æœç´¢æ ‘é‡Šæ”¾å†…å­˜
 		System.out.println();
 
 		//toString
