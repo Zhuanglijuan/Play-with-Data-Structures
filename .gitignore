@@ -30,12 +30,3 @@ Thumbs.db
 # Keynote       #
 #################
 *.key
-
-#################
-# Course       #
-#################
-ppt/
-text-contents/
-*.pdf
-*.PDF
-*.key
