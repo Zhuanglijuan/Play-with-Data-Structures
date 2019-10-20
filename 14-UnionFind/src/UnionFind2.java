@@ -14,7 +14,7 @@ public class UnionFind2 implements UF {
         parent = new int[size];
 
         for (int i = 0; i < parent.length; i++) {
-            // 初始化时每个节点都指向自己
+            // 初始化时每个节点都指向自己，每一个节点都是根节点
             parent[i] = i;
         }
     }

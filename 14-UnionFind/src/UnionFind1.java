@@ -60,6 +60,7 @@ public class UnionFind1 implements UF {
         int pID = find(p);
         int qID = find(q);
 
+        //找到与p元素相连的所有元素的id，然后更改为qid，使得和q也相连
         for (int i = 0; i < id.length; i++) {
             if (id[i] == pID) {
                 id[i] = qID;
