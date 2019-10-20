@@ -1,11 +1,11 @@
-/**
- * @author: zhuanglj
+/*
+  @author: zhuanglj
  * @create: 2019-04-23 18:09
  */
 
 /**
  * 第三版并查集
- * 基于size的优化
+ * 基于size的优化，即基于树的高度进行优化
  */
 public class UnionFind3 implements UF {
     private int[] parent;
@@ -65,6 +65,8 @@ public class UnionFind3 implements UF {
         if (pRoot == qRoot) {
             return;
         }
+        // 根据两个元素所在树的元素个数不同判断合并方向
+        // 将元素个数少的集合合并到元素个数多的集合上
         if (sz[pRoot] < sz[qRoot]) {
             parent[pRoot] = qRoot;
             sz[qRoot] += sz[pRoot];

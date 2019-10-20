@@ -72,6 +72,8 @@ public class UnionFind4 implements UF {
         } else if (rank[qRoot] < rank[pRoot]) {
             parent[qRoot] = pRoot;
         } else {
+            // rank[qRoot] == rank[pRoot]
+            // 相等的高度，合并需要加1
             parent[qRoot] = pRoot;
             rank[pRoot] += 1;
         }

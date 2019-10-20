@@ -40,6 +40,7 @@ public class UnionFind6 implements UF {
             throw new IllegalArgumentException("p is out of bound.");
         }
         if (p != parent[p]) {
+            // 除根节点以外的元素，使其父结点都等于根节点
             parent[p] = find(parent[p]);
         }
         return parent[p];
